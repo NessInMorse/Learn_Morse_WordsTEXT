@@ -18,10 +18,10 @@ yes_no=""
 begintime=0
 endtime=0
 
-#can also be done by hand by adding a "Races.csv"-file with: "Racenumber,Speed,Woord,Characters,Time" in the same folder and removing line 22-26 of this program
+#can also be done by hand by adding a "Races.csv"-file with: "Racenumber,Speed,Woord,Characters,Time,Morselength" in the same folder and removing line 22-26 of this program
 unless File.file?("D:/Programming/Ruby Folder/Learning_Morse_Code/Races.csv")
         File.open("D:/Programming/Ruby Folder/Learning_Morse_Code/Races.csv","w") do |data|
-            data.puts "Racenumber,Speed,Woord,Characters,Time"
+            data.puts "Racenumber,Speed,Woord,Characters,Time,Morselength"
         end
 end
 
@@ -57,7 +57,7 @@ while response !="n"
     endtime=Time.now
 
     File.open("D:/Programming/Ruby Folder/Learning_Morse_Code/Races.csv","a") do |data|
-      data.puts "#{racenumber},#{(answer.length.to_f/5)/( (endtime.to_f-begintime.to_f)/60 ).round(3)},#{answer},#{answer.length},#{begintime}"
+      data.puts "#{racenumber},#{(answer.length.to_f/5)/( (endtime.to_f-begintime.to_f)/60 ).round(3)},#{answer},#{answer.length},#{begintime},#{ask[1..ask.length].length}"
       racenumber+=1
     end
 

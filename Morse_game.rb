@@ -36,7 +36,12 @@ File.open("D:/Programming/Ruby Folder/Learning_Morse_Code/Races.csv","r") do |da
 end
 
 while response !="n"
-  sleep(0.5)
+        
+      puts "race starts in 2 seconds"
+      sleep(1)
+      puts "race starts in 1 second"
+      sleep(1)
+
   puts "The word you have to translate is:"
   puts ask[1..ask.length] 
   begintime=Time.now

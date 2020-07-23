@@ -57,11 +57,11 @@ while response !="n"
     end
 
 
-    puts "Het duurde #{(endtime.to_f)-(begintime.to_f)} seconds"
-    puts "Dat is #{answer.length/(endtime.to_f-begintime.to_f)} characters per second"
-    puts "De dat is #{(answer.length.to_f/5)/( (endtime.to_f-begintime.to_f)/60 )} WPM"
-    puts "De tijd om het bestand te laden was: #{loadtime_b.to_f-loadtime_a.to_f} seconds"
-    puts "want to try again"
+    puts "It took #{(endtime.to_f)-(begintime.to_f)} seconds"
+    puts "That's #{answer.length/(endtime.to_f-begintime.to_f)} characters per second"
+    puts "That's #{(answer.length.to_f/5)/( (endtime.to_f-begintime.to_f)/60 )} WPM"
+    puts "Loading time: #{loadtime_b.to_f-loadtime_a.to_f} seconds"
+    puts "want to try again?"
     
     yes_no=gets.chomp()
     if yes_no=="y" || yes_no="yes" || yes_no="ye" || yes_no==""

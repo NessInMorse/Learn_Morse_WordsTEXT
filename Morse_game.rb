@@ -66,8 +66,18 @@ while response !="n"
     puts "That's #{answer.length/(endtime.to_f-begintime.to_f)} characters per second"
     puts "That's #{(answer.length.to_f/5)/( (endtime.to_f-begintime.to_f)/60 )} WPM"
     puts "Loading time: #{loadtime_b.to_f-loadtime_a.to_f} seconds"
+    
+    if racenumber%100==0
+        puts "You have raced #{racenumber} times!"
+    end
+        
+        
     puts "want to try again?"
     
+        
+        
+        
+        
     yes_no=gets.chomp()
     if yes_no=="y" || yes_no="yes" || yes_no="ye" || yes_no==""
         loadtime_a=Time.now
